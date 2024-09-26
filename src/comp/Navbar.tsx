@@ -7,7 +7,6 @@ import {
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -18,7 +17,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "@/comp/Toggle-mode";
 import { LogoIcon } from "./Icons";
-import { Label } from "@radix-ui/react-dropdown-menu";
+
 
 interface Routedt{
   href:string;
@@ -42,7 +41,7 @@ const Routelist:Routedt[]=[
 const Navbar=()=>{
 const [isOpen,setIsOpen]=useState<boolean>(false)
   return(<>
-  <header className="sticky border-b-[1px] top-0 z-40  w-full bg-white dark:bg-background dark:border-b-slate-700">
+  <header className="sticky border-b-[1px] top-0 z-40  w-full bg-blue- dark:bg-background dark:border-b-slate-700">
     <NavigationMenu>
   <NavigationMenuList className="h-14 px-4 w-screen flex justify-between">
     <NavigationMenuItem >

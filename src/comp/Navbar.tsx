@@ -43,10 +43,9 @@ const Navbar=()=>{
 const [isOpen,setIsOpen]=useState<boolean>(false)
   return(<>
   <header className="sticky border-b-[1px] top-0 z-40  w-full bg-white dark:bg-background dark:border-b-slate-700">
-    hii
     <NavigationMenu>
-  <NavigationMenuList>
-    <NavigationMenuItem>
+  <NavigationMenuList className="h-14 px-4 w-screen flex justify-between">
+    <NavigationMenuItem >
     <a
               rel="noreferrer noopener"
               href="/"
@@ -55,6 +54,7 @@ const [isOpen,setIsOpen]=useState<boolean>(false)
               ShadcnUI/React
             </a>
     </NavigationMenuItem>
+    <NavigationMenuItem>
     <span className="flex md:hidden">
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
   <SheetTrigger className="px-2"><Menu className=" flex w-20 h-10 md:hidden" onClick={() => setIsOpen(true)}/>
@@ -79,11 +79,48 @@ const [isOpen,setIsOpen]=useState<boolean>(false)
       {label}</a>
       
     ))}
+     <a
+                    rel="noreferrer noopener"
+                    href="https://github.com/realsudarshan"
+                    target="_blank"
+                    className={`w-[110px] border ${buttonVariants({
+                      variant: "secondary",
+                    })}`}
+                  >
+                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
+                    Github
+                  </a>
   </nav>
   </SheetContent>
 </Sheet>
-      <ModeToggle/>
-    </span>
+<ModeToggle/>
+</span>
+</NavigationMenuItem>
+<NavigationMenuItem className="hidden md:flex w-full md:justify-between  md:pl-96">
+
+<nav className="hidden md:flex md:gap-2 ">
+            {Routelist.map((route: Routedt, i) => (
+              <a
+                rel="noreferrer noopener"
+                href={route.href}
+                key={i}
+                className={`text-[17px] ${buttonVariants({
+                  variant: "ghost",
+                })}`}
+              >
+                {route.label}
+              </a>
+            ))}
+            
+          </nav>
+          <ModeToggle />
+          
+         
+          
+    
+
+</NavigationMenuItem>
+    
   </NavigationMenuList>
 </NavigationMenu>
     </header></>)

@@ -47,4 +47,14 @@ export default tseslint.config({
     ...react.configs['jsx-runtime'].rules,
   },
 })
-```
+```.................................
+Problem I faced or some points:
+
+a)first commit
+1)The rel="noopener noreferrer" combination is often used together when opening a link in a new tab (target="_blank"), as it provides both security (by blocking the window.opener) and privacy (by blocking the referrer header).
+2)Array.map(callback)
+callback either use () without return or {}with return statement.both are same
+3)"isOpen" state is useful for recording state of sheet and can be open or close dynamically.
+Sheet come with attribute onOpen and onOpenChange
+
+
